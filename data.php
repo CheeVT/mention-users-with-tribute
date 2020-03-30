@@ -9,6 +9,10 @@ $data = [
   ],
   [
     'key' => 2,
+    'name' => 'Matija'
+  ],
+  [
+    'key' => 2,
     'name' => 'Stanko'
   ],
   [
@@ -17,7 +21,7 @@ $data = [
   ]
 ];
 
-$result = array_filter($data, function($name) use($query) {
+array_filter($data, function($name) use($query) {
   return strpos($name['name'], $query) == 0;
 }); 
 
